@@ -1,15 +1,12 @@
-function button() {
-
-    function onClick() {
-        console.log('clicked')
-    }
+function button({ onClick, text, color }) {
 
     return (
         <button
-            onClick={onClick}
             className="btn"
+            onClick={onClick}
+            style={{ backgroundColor: `${color}` }}
         >
-            Add
+            {text}
         </button>
     )
 }

@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import Task from './Task'
 
 function Tasks({ tasks, onDelete, onToggle }) {
@@ -9,7 +8,7 @@ function Tasks({ tasks, onDelete, onToggle }) {
                     key={task.id}
                     task={task}
                     onDelete={() => onDelete(task.id)}
-                    onToggle={onToggle}
+                    onToggle={() => onToggle(task.id)}
                 />
             )}
         </>

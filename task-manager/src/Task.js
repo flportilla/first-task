@@ -3,7 +3,7 @@ import { FaTimes } from 'react-icons/fa'
 
 function Task({ task, onDelete, onToggle }) {
     return (
-        <div className='task' onDoubleClick={onToggle}>
+        <div className={`task ${task.reminder ? 'reminder' : ''}`} onDoubleClick={onToggle}>
             <h3>
                 {task.text}
                 <FaTimes
